@@ -89,6 +89,7 @@ class squid (
   anchor{'squid::begin':}
   -> class{'::squid::install':}
   -> class{'::squid::config':}
+  ~> class{'::squid::verify_config':}
   ~> class{'::squid::service':}
   -> anchor{'squid::end':}
 
